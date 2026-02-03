@@ -5,7 +5,7 @@
 }:
 
 stdenv.mkDerivation rec {
-  pname = "gcc-xtensa-lx106-elf-bin";
+  pname = "gcc-xtensa-lx106-elf-esp";
   version = "2020r3";
 
   suffix =
