@@ -6,7 +6,7 @@
 
 stdenv.mkDerivation rec {
   pname = "xtensa-esp32-elf";
-  version = "esp-15.2.0_20251204";
+  version = "15.2.0_20251204";
 
   suffix =
     {
@@ -19,7 +19,7 @@ stdenv.mkDerivation rec {
     .${stdenv.hostPlatform.system} or (throw "Unsupported system: ${stdenv.hostPlatform.system}");
 
   src = fetchurl {
-    url = "https://github.com/espressif/crosstool-NG/releases/download/${version}/xtensa-esp-elf-${version}-${suffix}.tar.xz";
+    url = "https://github.com/espressif/crosstool-NG/releases/download/esp-${version}/xtensa-esp-elf-${version}-${suffix}.tar.xz";
     hash =
       {
         x86_64-linux = "sha256:3d50f5cd5f173acfd524e07c1cd69bc99585731a415ca2e5bce879997fe602b8";
