@@ -1,6 +1,6 @@
 # https://gist.github.com/wirew0rm/4881987e7549b390c3acd5767f3b8d6a
 
-{ stdenv, fetchgit, fetchurl, writeText, automake, autoconf, aria, coreutils, curl, cvs, gcc, git, python, which, bison, flex, gperf, help2man, libtool, ncurses, texinfo, wget, file }:
+{ stdenv, fetchgit, fetchurl, writeText, automake, autoconf, aria2, coreutils, curl, cvs, gcc, git, python3, which, bison, flex, gperf, help2man, libtool, ncurses, texinfo, wget, file }:
 
 stdenv.mkDerivation {
   name = "xtensa-esp32-elf";
@@ -19,8 +19,8 @@ stdenv.mkDerivation {
   };
 
   nativeBuildInputs = [
-    autoconf automake aria coreutils curl cvs
-    gcc git python which file wget
+    autoconf automake aria2 coreutils curl cvs
+    gcc git python3 which file wget
   ];
 
   # https://unix.stackexchange.com/questions/356232/disabling-the-security-hardening-options-for-a-nix-shell-environment#367990
